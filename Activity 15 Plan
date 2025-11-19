@@ -1,0 +1,17 @@
+Project Plan:
+1. Load all libraries that will be used
+2. Load all datasets that will be used
+3. Add code that is asked from previous activities and change code where needed
+4. Add plots and tables where asked
+5. Add narrative text about describing plots
+6. Make sure to comment code where needed
+7. Add Code Appendix
+8. Add things like YAML header and make sure each different part of code is spaced out with headings describing different parts
+9. Render qmd file into html file
+
+Repo Plan:
+1. Create documents where asked
+2. Add files where asked
+3. Solve issues that pop up
+4. Make sure to comment correctly, and commit all changes to main branch
+5. Change or adjust anything that the rubric asks
