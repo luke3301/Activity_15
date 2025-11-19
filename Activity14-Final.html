@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Luke Shoemaker">
-<meta name="dcterms.date" content="2025-11-17">
+<meta name="dcterms.date" content="2025-11-19">
 
 <title>Activity #14</title>
 <style>
@@ -59,16 +59,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="Activity14_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Activity14_files/libs/quarto-html/quarto.js"></script>
-<script src="Activity14_files/libs/quarto-html/popper.min.js"></script>
-<script src="Activity14_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="Activity14_files/libs/quarto-html/anchor.min.js"></script>
-<link href="Activity14_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Activity14_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="Activity14_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="Activity14_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="Activity14_files/libs/bootstrap/bootstrap-69cfdfb4d7dc33ca24876afa0d06903f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="Activity14-Final_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Activity14-Final_files/libs/quarto-html/quarto.js"></script>
+<script src="Activity14-Final_files/libs/quarto-html/popper.min.js"></script>
+<script src="Activity14-Final_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Activity14-Final_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Activity14-Final_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Activity14-Final_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Activity14-Final_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Activity14-Final_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Activity14-Final_files/libs/bootstrap/bootstrap-69cfdfb4d7dc33ca24876afa0d06903f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -99,14 +99,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 17, 2025</p>
+      <p class="date">November 19, 2025</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">November 17, 2025</p>
+      <p class="date-modified">November 19, 2025</p>
     </div>
   </div>
     
@@ -124,8 +124,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="load-data-sets" class="level3" data-number="1.1.1">
 <h3 data-number="1.1.1" class="anchored" data-anchor-id="load-data-sets"><span class="header-section-number">1.1.1</span> Load Data sets</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>US_Troops <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"US_Armed_Forces_2024.csv"</span>, <span class="at">skip =</span> <span class="dv">1</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(babynames)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I will be using the Google R Style for my coding</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>US_Troops <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"US_Armed_Forces_2024.csv"</span>, <span class="at">skip =</span> <span class="dv">1</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(babynames)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="load-necessary-libraries" class="level3" data-number="1.1.2">
@@ -414,7 +415,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="us-armed-soldiers-narrative-text" class="level3" data-number="1.1.5">
 <h3 data-number="1.1.5" class="anchored" data-anchor-id="us-armed-soldiers-narrative-text"><span class="header-section-number">1.1.5</span> US Armed Soldiers Narrative Text</h3>
-<p>The table that is produced by the code, shows the number of male and female soldiers that are apart of the army in different Pay Grade ranks. The table shows that there are typically a much larger amount of troops with the male gender in a certain Pay Grade compared to those with a female gender in that Pay Grade. The frequency of troops in the Pay Grade rises as the Pay Grade rank rises, until the Pay Grade rank reaches about E4. Once this happens the frequency of troops also starts to decrease. This means that E4 is the peak rank for the highest frequency of troops. This also suggests that the Pay Grade and Gender of the troops are not independent and affect each other. It also suggests that maybe after a certain rank, the number of troops that get promoted becomes less and less.</p>
+<p>The table that is produced by the code, shows the number of male and female soldiers that are a part of the army in different Pay Grade ranks. The table shows that there are typically a much larger amount of troops with the male gender in a certain Pay Grade compared to those with a female gender in that Pay Grade. The frequency of troops in the Pay Grade rises as the Pay Grade rank rises, until the Pay Grade rank reaches about E4. Once this happens the frequency of troops also starts to decrease. This means that E4 is the peak rank for the highest frequency of troops. This also suggests that the Pay Grade and Gender of the troops are not independent and affect each other. It also suggests that maybe after a certain rank, the number of troops that get promoted becomes less and less.</p>
 </section>
 </section>
 <section id="baby-names-problem" class="level2" data-number="1.2">
@@ -460,7 +461,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Activity14_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Activity14-Final_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -468,7 +469,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="baby-names-narrative-text" class="level3" data-number="1.2.2">
 <h3 data-number="1.2.2" class="anchored" data-anchor-id="baby-names-narrative-text"><span class="header-section-number">1.2.2</span> Baby Names Narrative Text</h3>
-<p>The plot shows the selected names: James, William, Thomas, Alexander, Taylor, and Travis, which were chosen for no specific reason, and the plot shows a lot of common trends between the names. The plot shows that these names did not become popular till around 1910. During that time the names James and William both began to become popular pretty quickly, with the name Thomas growing in popularity but pretty slowly. Meanwhile the other names remained unpopular, and around the 1950s was when James, William and Thomas reached their peak popularity. James being the most popular with around 95,000 being named James at its most popular, then William was the second most popular at that time, and then Thomas. After the 1950s, these 3 names all moderatly decreased in popularity. The other names: Taylor, Alexander, and Travis, were all unpopular until the late 1980s,when they began to start gaining popularity, and reaching their peak popularities in the 1990s. After this, all of these names also started to decrease in popularity. Overall, the plot shows the names did not really become popular until the 1910s, when 3 names started to gain popularity and then reach their peaks around 1950. The other names gained popularity around the 1980s and then reach their peak in the 1990s, and after their peaks, all of the names decreased in popularity at around the same rates.</p>
+<p>The plot shows the selected names: James, William, Thomas, Alexander, Taylor, and Travis, which were chosen for no specific reason, and the plot shows a lot of common trends between the names. The plot shows that these names did not become popular until around 1910. During that time the names James and William both began to become popular pretty quickly, with the name Thomas growing in popularity but pretty slowly. Meanwhile the other names remained unpopular, and around the 1950s was when James, William and Thomas reached their peak popularity. James being the most popular with around 95,000 being named James at its most popular, then William was the second most popular at that time, and then Thomas. After the 1950s, these 3 names all moderately decreased in popularity. The other names: Taylor, Alexander, and Travis, were all unpopular until the late 1980s,when they began to start gaining popularity, and reaching their peak popularities in the 1990s. After this, all of these names also started to decrease in popularity. Overall, the plot shows the names did not really become popular until the 1910s, when 3 names started to gain popularity and then reach their peaks around 1950. The other names gained popularity around the 1980s and then reach their peak in the 1990s, and after their peaks, all of the names decreased in popularity at around the same rates.</p>
 </section>
 </section>
 <section id="box-problem" class="level2" data-number="1.3">
@@ -499,7 +500,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Activity14_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Activity14-Final_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -542,326 +543,85 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Pay_Grade <span class="sc">!=</span> <span class="st">"Total Officers"</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Pay_Grade <span class="sc">!=</span> <span class="st">"Total"</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">uncount</span>(troops) <span class="co">#for every number in each row, it will make that many cases with the identical other columns, like if there are 100 people in one group of troops, then it will make 100 cases that are identical to it and will get rid of the troops column</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">head</span>(US_Troops_TidySoldiers, <span class="dv">25</span>), <span class="at">caption =</span> <span class="st">"Figure 1: Data set where each case is a soldier, listing their pay grade, branch, and gender"</span>) <span class="co"># create table for the US_Troops_TidySoldiers data set</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>Figure 1: Data set where each case is a soldier, listing their pay grade, branch, and gender</caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Pay_Grade</th>
-<th style="text-align: left;">branch</th>
-<th style="text-align: left;">gender</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Army</td>
-<td style="text-align: left;">Male</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>frequency_table <span class="ot">&lt;-</span> US_Troops_TidySoldiers <span class="sc">%&gt;%</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(branch <span class="sc">==</span> <span class="st">"Army"</span>) <span class="sc">%&gt;%</span> <span class="co">#only include troops from the army branch</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Pay_Grade <span class="sc">==</span> <span class="st">"E1"</span><span class="sc">|</span> Pay_Grade <span class="sc">==</span> <span class="st">"E2"</span><span class="sc">|</span> Pay_Grade <span class="sc">==</span> <span class="st">"E3"</span><span class="sc">|</span> Pay_Grade <span class="sc">==</span> <span class="st">"E4"</span><span class="sc">|</span> Pay_Grade <span class="sc">==</span> <span class="st">"E5"</span><span class="sc">|</span> Pay_Grade <span class="sc">==</span> <span class="st">"E6"</span><span class="sc">|</span> Pay_Grade <span class="sc">==</span> <span class="st">"E7"</span><span class="sc">|</span> Pay_Grade <span class="sc">==</span> <span class="st">"E8"</span><span class="sc">|</span> Pay_Grade <span class="sc">==</span> <span class="st">"E9"</span>) <span class="co">#only include troops that are part of the enlisted rank</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>frequency_table <span class="ot">&lt;-</span> frequency_table <span class="sc">%&gt;%</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Pay_Grade, gender) <span class="sc">%&gt;%</span> <span class="co">#organizes the table so that each case is a different combination of the rank of the troops or their gender</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">Frequency =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span> <span class="co">#creates a new column that counts the number of troops that fits each case</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="st">"Pay Grade"</span> <span class="ot">=</span> Pay_Grade, <span class="st">"Gender"</span> <span class="ot">=</span> gender)</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">head</span>(frequency_table, <span class="dv">25</span>), <span class="at">caption =</span> <span class="st">"Figure 2: Data set of frequencies of a pay grade and gender pair, where each case is unique"</span>) <span class="co"># create table for the frequency_table data set</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<caption>Figure 2: Data set of frequencies of a pay grade and gender pair, where each case is unique</caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Pay Grade</th>
-<th style="text-align: left;">Gender</th>
-<th style="text-align: right;">Frequency</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Female</td>
-<td style="text-align: right;">1322</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E1</td>
-<td style="text-align: left;">Male</td>
-<td style="text-align: right;">7909</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E2</td>
-<td style="text-align: left;">Female</td>
-<td style="text-align: right;">3383</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E2</td>
-<td style="text-align: left;">Male</td>
-<td style="text-align: right;">18763</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E3</td>
-<td style="text-align: left;">Female</td>
-<td style="text-align: right;">8169</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E3</td>
-<td style="text-align: left;">Male</td>
-<td style="text-align: right;">38802</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E4</td>
-<td style="text-align: left;">Female</td>
-<td style="text-align: right;">14619</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E4</td>
-<td style="text-align: left;">Male</td>
-<td style="text-align: right;">81278</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E5</td>
-<td style="text-align: left;">Female</td>
-<td style="text-align: right;">11111</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E5</td>
-<td style="text-align: left;">Male</td>
-<td style="text-align: right;">55671</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E6</td>
-<td style="text-align: left;">Female</td>
-<td style="text-align: right;">7432</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E6</td>
-<td style="text-align: left;">Male</td>
-<td style="text-align: right;">50030</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E7</td>
-<td style="text-align: left;">Female</td>
-<td style="text-align: right;">4322</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E7</td>
-<td style="text-align: left;">Male</td>
-<td style="text-align: right;">30367</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E8</td>
-<td style="text-align: left;">Female</td>
-<td style="text-align: right;">1426</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E8</td>
-<td style="text-align: left;">Male</td>
-<td style="text-align: right;">9287</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">E9</td>
-<td style="text-align: left;">Female</td>
-<td style="text-align: right;">413</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">E9</td>
-<td style="text-align: left;">Male</td>
-<td style="text-align: right;">2908</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Names to be plotted</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"James"</span>, <span class="st">"William"</span>, <span class="st">"Alexander"</span>, <span class="st">"Thomas"</span>, <span class="st">"Taylor"</span>, <span class="st">"Travis"</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Wrangling Data so that all male and female cases with same name and year have their counts combined, then filter out the names that I don't want</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>New_Names <span class="ot">&lt;-</span> babynames <span class="sc">%&gt;%</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(name, year) <span class="sc">%&gt;%</span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_names =</span> <span class="fu">sum</span>(n), <span class="co">#adds all of the males and females with the same name and birth year</span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>      ) <span class="sc">%&gt;%</span></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    name <span class="sc">%in%</span> names <span class="co">#removes all names that are not part of our originally selected names </span></span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co">#Plotting the data onto a line plot</span></span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(New_Names, <span class="fu">aes</span>(</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> year, <span class="co"># x-axis as the year</span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> total_names, <span class="co"># y-axis as the total names for that year</span></span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> name, <span class="co"># color of line is different for different names</span></span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">linetype =</span> name <span class="co"># pattern of line is different for different names</span></span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> <span class="fu">geom_line</span>(</span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> <span class="fu">labs</span>( <span class="co">#relabel the x-axis, y-axis, title, and key for the colors </span></span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="st">"Total Count of Names"</span>,</span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">"Figure 3: Popularity of Selected Names Over Time"</span>,</span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> <span class="st">"Selected Names"</span>,</span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">linetype =</span> <span class="st">"Selected Names"</span>,</span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>  <span class="at">alt =</span> <span class="st">"Line shows popularity of 6 names, with Alexander, James and Taylor becoming really popular in the 1940s and 1950s, while the names Thomas, Travis, and William became more popular in the 1980s and 1990s"</span></span>
-<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">head</span>(US_Troops_TidySoldiers, <span class="dv">25</span>), <span class="at">caption =</span> <span class="st">"Figure 1: Data set where each case is a soldier, listing their pay grade, branch, and gender"</span>) <span class="co"># create table for the US_Troops_TidySoldiers data set</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>frequency_table <span class="ot">&lt;-</span> US_Troops_TidySoldiers <span class="sc">%&gt;%</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(branch <span class="sc">==</span> <span class="st">"Army"</span>) <span class="sc">%&gt;%</span> <span class="co">#only include troops from the army branch</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Pay_Grade <span class="sc">==</span> <span class="st">"E1"</span><span class="sc">|</span> Pay_Grade <span class="sc">==</span> <span class="st">"E2"</span><span class="sc">|</span> Pay_Grade <span class="sc">==</span> <span class="st">"E3"</span><span class="sc">|</span> Pay_Grade <span class="sc">==</span> <span class="st">"E4"</span><span class="sc">|</span> Pay_Grade <span class="sc">==</span> <span class="st">"E5"</span><span class="sc">|</span> Pay_Grade <span class="sc">==</span> <span class="st">"E6"</span><span class="sc">|</span> Pay_Grade <span class="sc">==</span> <span class="st">"E7"</span><span class="sc">|</span> Pay_Grade <span class="sc">==</span> <span class="st">"E8"</span><span class="sc">|</span> Pay_Grade <span class="sc">==</span> <span class="st">"E9"</span>) <span class="co">#only include troops that are part of the enlisted rank</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>frequency_table <span class="ot">&lt;-</span> frequency_table <span class="sc">%&gt;%</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Pay_Grade, gender) <span class="sc">%&gt;%</span> <span class="co">#organizes the table so that each case is a different combination of the rank of the troops or their gender</span></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">Frequency =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span> <span class="co">#creates a new column that counts the number of troops that fits each case</span></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="st">"Pay Grade"</span> <span class="ot">=</span> Pay_Grade, <span class="st">"Gender"</span> <span class="ot">=</span> gender)</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">head</span>(frequency_table, <span class="dv">25</span>), <span class="at">caption =</span> <span class="st">"Figure 2: Data set of frequencies of a pay grade and gender pair, where each case is unique"</span>) <span class="co"># create table for the frequency_table data set</span></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a><span class="co">#Names to be plotted</span></span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"James"</span>, <span class="st">"William"</span>, <span class="st">"Alexander"</span>, <span class="st">"Thomas"</span>, <span class="st">"Taylor"</span>, <span class="st">"Travis"</span>)</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="co">#Wrangling Data so that all male and female cases with same name and year have their counts combined, then filter out the names that I don't want</span></span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>New_Names <span class="ot">&lt;-</span> babynames <span class="sc">%&gt;%</span></span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(name, year) <span class="sc">%&gt;%</span></span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_names =</span> <span class="fu">sum</span>(n), <span class="co">#adds all of the males and females with the same name and birth year</span></span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>      ) <span class="sc">%&gt;%</span></span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>    name <span class="sc">%in%</span> names <span class="co">#removes all names that are not part of our originally selected names </span></span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a><span class="co">#Plotting the data onto a line plot</span></span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(New_Names, <span class="fu">aes</span>(</span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> year, <span class="co"># x-axis as the year</span></span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> total_names, <span class="co"># y-axis as the total names for that year</span></span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> name, <span class="co"># color of line is different for different names</span></span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>  <span class="at">linetype =</span> name <span class="co"># pattern of line is different for different names</span></span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> <span class="fu">geom_line</span>(</span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> <span class="fu">labs</span>( <span class="co">#relabel the x-axis, y-axis, title, and key for the colors </span></span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="st">"Year"</span>,</span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="st">"Total Count of Names"</span>,</span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">"Figure 3: Popularity of Selected Names Over Time"</span>,</span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> <span class="st">"Selected Names"</span>,</span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a>  <span class="at">linetype =</span> <span class="st">"Selected Names"</span>,</span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a>  <span class="at">alt =</span> <span class="st">"Line shows popularity of 6 names, with Alexander, James and Taylor becoming really popular in the 1940s and 1950s, while the names Thomas, Travis, and William became more popular in the 1980s and 1990s"</span></span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Activity14_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Activity14-Final_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Code for function</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>volume.box <span class="ot">&lt;-</span> <span class="cf">function</span>(x){ <span class="co">#volume function that has length of square as 48 inches &amp; width of square as 36 inches</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  nLength <span class="ot">&lt;-</span> (<span class="dv">48</span> <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span>x) <span class="co">#length of box where it is the length of the square side, but minus 2x</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  nWidth <span class="ot">&lt;-</span> (<span class="dv">36</span> <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span>x) <span class="co">#width of box where it is the width of the square side, but minus 2x</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  volume <span class="ot">&lt;-</span> (nLength <span class="sc">*</span> nWidth <span class="sc">*</span> x) <span class="co">#volume of box is length of box times width of box times x</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(volume)</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co">#Code to create visualization</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">18</span>, <span class="fl">0.1</span>)), <span class="co">#make a plot of function with cuts only going up to 18 because more than that would give negative numbers</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> x)</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_function</span>(<span class="at">fun =</span> volume.box) <span class="sc">+</span> <span class="co">#use the volume.box function for the plot</span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="co"># relabel the x-axis, y-axis, and title</span></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Figure 4: Volume of Box Function"</span>,</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Cut size in inches"</span>,</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Volume of Box"</span>,</span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">alt =</span> <span class="st">"As cut size increases, so does the volume of box until around 7 inch cuts, after that the volume of box decreases until around 18 inch cuts, where the box reaches a volume of 0."</span></span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Code for function</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>volume.box <span class="ot">&lt;-</span> <span class="cf">function</span>(x){ <span class="co">#volume function that has length of square as 48 inches &amp; width of square as 36 inches</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  nLength <span class="ot">&lt;-</span> (<span class="dv">48</span> <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span>x) <span class="co">#length of box where it is the length of the square side, but minus 2x</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  nWidth <span class="ot">&lt;-</span> (<span class="dv">36</span> <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span>x) <span class="co">#width of box where it is the width of the square side, but minus 2x</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  volume <span class="ot">&lt;-</span> (nLength <span class="sc">*</span> nWidth <span class="sc">*</span> x) <span class="co">#volume of box is length of box times width of box times x</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(volume)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">#Code to create visualization</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">18</span>, <span class="fl">0.1</span>)), <span class="co">#make a plot of function with cuts only going up to 18 because more than that would give negative numbers</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> x)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_function</span>(<span class="at">fun =</span> volume.box) <span class="sc">+</span> <span class="co">#use the volume.box function for the plot</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="co"># relabel the x-axis, y-axis, and title</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Figure 4: Volume of Box Function"</span>,</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Cut size in inches"</span>,</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Volume of Box"</span>,</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">alt =</span> <span class="st">"As cut size increases, so does the volume of box until around 7 inch cuts, after that the volume of box decreases until around 18 inch cuts, where the box reaches a volume of 0."</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="Activity14_files/figure-html/unnamed-chunk-7-2.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="Activity14-Final_files/figure-html/unnamed-chunk-7-2.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>

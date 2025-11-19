@@ -29,6 +29,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ### Load Data sets
 
 ```{r}
+# I will be using the Google R Style for my coding
 US_Troops <- read.csv("US_Armed_Forces_2024.csv", skip = 1)
 library(babynames)
 ```
